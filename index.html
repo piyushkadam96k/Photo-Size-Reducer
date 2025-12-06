@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Size Reducer | Fast & Secure</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="app-wrapper">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i>
+                <span>PhotoReducer</span>
+            </div>
+
+            <div class="visitor-badge">
+                <i class="fa-solid fa-eye"></i>
+                <span id="visitorCount">Loading...</span>
+            </div>
+
+            <a href="https://github.com/piyushkadam96k" target="_blank" class="github-btn">
+                <i class="fa-brands fa-github"></i>
+                <span>piyushkadam96k</span>
+            </a>
+        </header>
+
+        <main>
+            <div class="card glass-card">
+                <!-- Hero Text -->
+                <div class="hero-text">
+                    <h1>Optimize Images Instantly</h1>
+                    <p>Reduce file size locally without losing quality.</p>
+                </div>
+
+                <!-- Error Container -->
+                <div id="errorContainer" class="error-container hidden">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span id="errorText">Error message here</span>
+                    <button id="closeError"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <!-- Upload Section -->
+                <div id="uploadSection" class="upload-section">
+                    <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp" hidden>
+                    <div class="drop-zone" id="dropZone">
+                        <div class="icon-wrap">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+                        <h3>Drag & Drop Image</h3>
+                        <p>or click to browse</p>
+                        <button class="btn btn-primary" id="browseBtn">Choose File</button>
+                    </div>
+                </div>
+
+                <!-- Editor Section -->
+                <div id="editorSection" class="editor-section hidden">
+
+                    <!-- Preview Area -->
+                    <div class="preview-area">
+                        <!-- Original -->
+                        <div class="preview-card">
+                            <span class="badge original">Original</span>
+                            <div class="img-container">
+                                <img id="originalPreview" src="" alt="Original">
+                            </div>
+                            <div class="meta" id="originalMeta">0 KB</div>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="transfer-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                        <!-- Compressed -->
+                        <div class="preview-card">
+                            <span class="badge result">Result</span>
+                            <div class="img-container">
+                                <div id="loader" class="loader hidden">
+                                    <div class="spinner"></div>
+                                </div>
+                                <img id="compressedPreview" src="" alt="Compressed">
+                            </div>
+                            <div class="meta" id="compressedMeta">0 KB</div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="controls-area">
+                        <div class="control-row">
+                            <div class="control-group">
+                                <label>Format</label>
+                                <select id="formatSelect">
+                                    <option value="original">Original</option>
+                                    <option value="image/jpeg">JPEG (Compact)</option>
+                                    <option value="image/png">PNG (Lossless)</option>
+                                    <option value="image/webp">WebP (Modern)</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label>Quality: <span id="qualityVal">80%</span></label>
+                                <input type="range" id="qualityRange" min="1" max="100" value="80">
+                            </div>
+                        </div>
+
+                        <div class="control-row">
+                            <div class="control-group">
+                                <label>Width (px)</label>
+                                <input type="number" id="widthInput" placeholder="Auto">
+                            </div>
+                            <div class="control-group">
+                                <label>Height (px)</label>
+                                <input type="number" id="heightInput" placeholder="Auto">
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" id="resetBtn">
+                                <i class="fa-solid fa-rotate-left"></i> Reset
+                            </button>
+                            <button class="btn btn-primary" id="downloadBtn">
+                                <i class="fa-solid fa-download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Runs entirely in browser. No file upload to server.</p>
+            <p>&copy; 2025 PhotoReducer. Don't copy this website. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
