@@ -71,18 +71,6 @@ graph LR
     F --> G;
 ```
 
----
-
-## 👨‍💻 Author
-
-**Piyush Kadam**  
-*Full Stack Developer & UI Enthusiast*
-
-[![GitHub](https://img.shields.io/badge/GitHub-piyushkadam96k-181717?style=flat-square&logo=github)](https://github.com/piyushkadam96k)
-[![Instagram](https://img.shields.io/badge/Instagram-piyush__kadam96k-E4405F?style=flat-square&logo=instagram)](https://www.instagram.com/piyush_kadam96k)
-
----
-
 ## 🛡️ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
